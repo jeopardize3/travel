@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: burlywood;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    height: 30px;
+}
+
+nav ul li a {
+    color: rgb(248, 248, 248);
+    text-decoration: none;
+    padding: 1rem;
+    text-align: center;
+    font-size: x-large;
+}
+
+nav ul li a:hover {
+    background-color: #682727;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    
+    color: rgb(0, 255, 255);
+}
+
+.video-background {
+    position: absolute;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background-color: rgb(116, 78, 78);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+th, td {
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #191d1a;
+    color: white;
+}
+tr:hover {
+    background-color: #f1f1f1;
+}
+img {
+    height: 300px;
+    width: auto;
+    border-radius: 8px;
+    gap: 10px;
+}
+.head{
+    color: black;
+    font-size: x-large;
+}
+
+.destination-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.destination-card {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.destination-card img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 5px;
+    padding: 0.5rem;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: inherit;
+    border-radius: 10px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: green;
+    font-weight: bold;
+    
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+}
+
+button {
+    background-color: #333;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .destination-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    nav ul {
+        flex-direction: column;
+    }
+}
+/* Destinations Page Specific Styles */
+.destinations-hero {
+    color: white;
+    text-align: center;
+}
+
+.active{
+    color: #fafdfd;
+    background-color: #0026ff;
+}
+.destination-filter {
+    padding: 2rem;
+    text-align: center;
+}
+
+.filter-options {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 0.8rem 2rem;
+    border: 2px solid #333;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: #333;
+    color: white;
+}
+
+.destinations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.destination-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.destination-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1.5rem;
+}
+
+.rating {
+    color: #ffd700;
+    margin: 0.5rem 0;
+}
+
+.price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2ecc71;
+}
+
+.cta-btn {
+    background-color: #ffffff;
+    color: rgb(247, 246, 246);
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    text-decoration: none;
+}
+
+.cta-bt{
+    background-color: #3700ff;
+    border: none; 
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 0.8rem 1.5rem;
+    color: rgb(247, 246, 246);
+}
+
+.destination-cta {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .destinations-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .cta-btn {
+        width: 100%;
+        margin-top: rem;
+    }
+}
+
+.feedback{
+    width: 30px;
+    height: 30px;
+   padding: 0.5px;
+   align-content: center;
+}
+.feedback .txt{
+    color: #2ecc71;
+    text-decoration: none;
+}
+.whatsapp-icon {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 15px;
+    background-color: #25d366;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+.whatsapp-icon i {
+    margin-top: 15px;
+}
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 30%;
+    transition: transform 0.3s, opacity 0.3s;
+    box-shadow: 2px 2px 3px #999;
+    z-index: 1000;
+}
+.facebook { background-color: #3b5998; }
+.twitter { background-color: #55acee; }
+.instagram { background-color: #e4405f; }
+.whatsapp { background-color: #25d366; }
+.youtube { background-color: #ff0000; }
